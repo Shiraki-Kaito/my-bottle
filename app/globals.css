@@ -406,6 +406,13 @@ label:has(input:focus-visible) {
   object-fit: contain;
 }
 
+.bottle-art--empty {
+  display: grid;
+  place-items: center;
+  color: #a9a095;
+  font-size: 0.75rem;
+}
+
 .shelf-bottle-art {
   width: 72px;
   height: 145px;
@@ -604,6 +611,43 @@ label:has(input:focus-visible) {
   font-size: 0.86rem;
 }
 
+.search-message {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--cream-50);
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.search-message strong {
+  color: var(--ink);
+}
+
+.search-message.is-error {
+  border-color: rgba(165, 59, 45, 0.25);
+  background: #fff8f5;
+}
+
+.search-message .form-error {
+  margin: 0;
+}
+
+.error-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 10px;
+}
+
+.error-actions .secondary-button {
+  min-height: 46px;
+}
+
 .flow-lead {
   margin: 0 0 15px;
   color: var(--muted);
@@ -649,6 +693,15 @@ label:has(input:focus-visible) {
   background: var(--dark-recess);
 }
 
+.candidate-image-frame img {
+  object-fit: contain;
+}
+
+.candidate-image-placeholder {
+  color: #a9a095;
+  font-size: 0.72rem;
+}
+
 .candidate-bottle-art {
   width: 57px;
   height: 114px;
@@ -672,6 +725,10 @@ label:has(input:focus-visible) {
   font-size: 0.78rem;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.candidate-source-url {
+  direction: ltr;
 }
 
 .candidate-type,

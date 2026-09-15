@@ -16,6 +16,25 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Image search setup
+
+画像検索を利用する場合は、プロジェクト直下にコミット対象外の`.env.local`を作成し、次の環境変数を設定してください。
+
+```text
+SERPAPI_KEY=your_serpapi_key
+```
+
+PowerShellの現在のセッションだけに設定する場合は、次の形式でも起動できます。
+
+```powershell
+$env:SERPAPI_KEY="your_serpapi_key"
+npm run dev
+```
+
+未設定でもアプリは起動し、画像検索の代わりに手入力で登録できます。APIキーに`NEXT_PUBLIC_`を付けないでください。
+
+候補検索時はGoogle Lensの上位結果から最大6件の商品ページをサーバー側で取得し、JSON-LD、構造化データ、Open Graph、metaタグの順に商品情報を整理します。取得HTMLは保存・ログ出力せず、1ページ1.5MB、5.5秒、リダイレクト3回までに制限しています。
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

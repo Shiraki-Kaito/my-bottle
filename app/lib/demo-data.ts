@@ -1,4 +1,4 @@
-import type { Bottle, SearchCandidate } from "./types";
+import type { Bottle } from "./types";
 
 const COLLECTION_IMAGE = "/bottle-collection.png";
 
@@ -41,32 +41,5 @@ export const DEMO_BOTTLES: Bottle[] = [
     drinkCount: 4,
     createdAt: "2026-09-01T10:00:00.000Z",
     updatedAt: "2026-09-12T10:00:00.000Z",
-  },
-];
-
-export const DEMO_SEARCH_CANDIDATES: SearchCandidate[] = [
-  {
-    id: "candidate-kashinone",
-    name: "樫ノ音 ブレンデッド",
-    brand: "樫ノ音蒸溜所",
-    category: "ウイスキー",
-    alcoholPercentage: 40,
-    image: { src: COLLECTION_IMAGE, crop: "left" },
-  },
-  {
-    id: "candidate-aohari",
-    name: "青玻璃 クラフトジン",
-    brand: "青玻璃ディスティラリー",
-    category: "ジン",
-    alcoholPercentage: 45,
-    image: { src: COLLECTION_IMAGE, crop: "center" },
-  },
-  {
-    id: "candidate-mizukagami",
-    name: "水鏡 純米大吟醸",
-    brand: "水鏡酒造",
-    category: "日本酒",
-    alcoholPercentage: 16,
-    image: { src: COLLECTION_IMAGE, crop: "right" },
   },
 ];

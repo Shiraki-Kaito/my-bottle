@@ -1,9 +1,13 @@
 export const BOTTLE_CATEGORIES = [
   "ウイスキー",
   "ジン",
-  "日本酒",
-  "ワイン",
   "ラム",
+  "ウォッカ",
+  "日本酒",
+  "焼酎",
+  "ビール",
+  "ワイン",
+  "リキュール",
   "その他",
 ] as const;
 
@@ -33,6 +37,31 @@ export interface Bottle extends BottleDraft {
   updatedAt: string;
 }
 
-export interface SearchCandidate extends BottleDraft {
+export interface SearchCandidate {
   id: string;
+  name: string | null;
+  brand: string | null;
+  category: BottleCategory | null;
+  alcoholPercentage: number | null;
+  productionLocation: string | null;
+  volume: string | null;
+  imageDataUrl: string | null;
+  sourceSite: string;
+  sourceUrl: string;
+  lookupToken: string;
+}
+
+export interface BottleSearchDetails {
+  name: string;
+  brand: string | null;
+  category: BottleCategory | null;
+  alcoholPercentage: number | null;
+}
+
+export interface BottleFormDraft {
+  name: string;
+  brand: string;
+  category: BottleCategory | "";
+  alcoholPercentage: string;
+  image: BottleImage;
 }

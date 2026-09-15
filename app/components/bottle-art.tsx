@@ -14,6 +14,18 @@ export function BottleArt({
   className = "",
   priority = false,
 }: BottleArtProps) {
+  if (!image.src) {
+    return (
+      <div
+        aria-label={alt}
+        className={`bottle-art bottle-art--empty ${className}`}
+        role="img"
+      >
+        <span>画像なし</span>
+      </div>
+    );
+  }
+
   if (image.crop === "full") {
     return (
       <div className={`bottle-art bottle-art--uploaded ${className}`}>
